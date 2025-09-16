@@ -1,33 +1,9 @@
-# ✨ NailArt Studio - Web App para Manicuristas
+# Imágenes del Proyecto
 
-Una aplicación web completa para manicuristas que incluye galería de trabajos, sistema de reserva de citas y control de finanzas.
+Esta carpeta contiene las imágenes para la galería de trabajos de NailArt Studio.
 
-## 🚀 Características
-
-### 📱 Para Clientes
-- **Galería de trabajos** con filtros por categoría
-- **Sistema de reserva de citas** en línea
-- **Diseño responsive** para móviles y escritorio
-- **Interfaz intuitiva** y moderna
-
-### 🔧 Para la Manicurista
-- **Panel de administración** con acceso protegido
-- **Control de ingresos y gastos** automático
-- **Gestión de citas** reservadas
-- **Estadísticas financieras** en tiempo real
-
-## 🌐 Demo
-
-Puedes ver la aplicación funcionando en: **https://tu-usuario.github.io/manicurista-app**
-
-## 🛠️ Tecnologías Utilizadas
-
-- **HTML5** - Estructura y contenido
-- **CSS3** - Estilos y animaciones
-- **JavaScript** - Funcionalidad e interactividad
-- **LocalStorage** - Almacenamiento de datos
-- **GitHub Pages** - Hosting gratuito
-
-## 📦 Instalación
-
-1. **Clona el repositorio**
+## Contenido
+- Las imágenes se cargan desde URLs externas por ahora
+- Puedes subir tus propias imágenes de trabajos aquí
+- Formatos recomendados: JPG, PNG
+- Tamaño recomendado: 400x300px mínimo
