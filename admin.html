@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - NailArt Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <h2>Panel de Administración</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">Acceder</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="admin-nav">
+                <h1>Panel de Control</h1>
+                <div class="admin-actions">
+                    <a href="index.html" class="btn btn-secondary">Ver Web</a>
+                    <button id="logoutBtn" class="btn btn-danger">Cerrar Sesión</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-content">
+            <!-- Resumen Financiero -->
+            <div class="stats-grid">
+                <div class="stat-card income">
+                    <div class="stat-icon"><i class="fas fa-arrow-up"></i></div>
+                    <div class="stat-info">
+                        <h3 id="totalIngresos">0.00€</h3>
+                        <p>Ingresos Totales</p>
+                    </div>
+                </div>
+                <div class="stat-card expense">
+                    <div class="stat-icon"><i class="fas fa-arrow-down"></i></div>
+                    <div class="stat-info">
+                        <h3 id="totalGastos">0.00€</h3>
+                        <p>Gastos Totales</p>
+                    </div>
+                </div>
+                <div class="stat-card balance">
+                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="stat-info">
+                        <h3 id="balance">0.00€</h3>
+                        <p>Balance</p>
+                    </div>
+                </div>
+                <div class="stat-card appointments">
+                    <div class="stat-icon"><i class="fas fa-calendar"></i></div>
+                    <div class="stat-info">
+                        <h3 id="totalCitas">0</h3>
+                        <p>Citas Reservadas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-grid">
+                <!-- Agregar Transacción -->
+                <div class="admin-section">
+                    <h3>Agregar Transacción</h3>
+                    <form id="transactionForm">
+                        <div class="form-group">
+                            <label for="tipoTransaccion">Tipo</label>
+                            <select id="tipoTransaccion" name="tipo">
+                                <option value="ingreso">Ingreso</option>
+                                <option value="gasto">Gasto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad (€)</label>
+                            <input type="number" id="cantidad" name="cantidad" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" id="descripcion" name="descripcion" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaTransaccion">Fecha</label>
+                            <input type="date" id="fechaTransaccion" name="fecha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+                    </form>
+                </div>
+
+                <!-- Lista de Transacciones -->
+                <div class="admin-section">
+                    <h3>Transacciones Recientes</h3>
+                    <div id="transactionsList" class="transactions-list">
+                        <p class="no-data">No hay transacciones registradas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Citas Reservadas -->
+            <div class="admin-section full-width">
+                <h3>Citas Reservadas</h3>
+                <div id="citasList" class="citas-list">
+                    <p class="no-data">No hay citas reservadas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación -->
+    <div id="notificacion" class="notificacion">
+        <div class="notificacion-content">
+            <span class="notificacion-text"></span>
+            <button class="notificacion-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
