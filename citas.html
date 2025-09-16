@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita - NailArt Studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1><a href="index.html">✨ NailArt Studio</a></h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">← Volver al Inicio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulario de Citas -->
+    <section class="citas-section">
+        <div class="container">
+            <div class="citas-header">
+                <h1>Reserva tu Cita</h1>
+                <p>Completa el formulario y nos pondremos en contacto contigo</p>
+            </div>
+
+            <div class="citas-content">
+                <!-- Servicios -->
+                <div class="servicios-selector">
+                    <h3>Selecciona tu Servicio</h3>
+                    <div class="servicios-opciones">
+                        <div class="servicio-opcion" data-servicio="manicura" data-precio="25" data-duracion="45">
+                            <div class="servicio-info">
+                                <h4>Manicura Clásica</h4>
+                                <p>45 minutos</p>
+                            </div>
+                            <div class="servicio-precio">25€</div>
+                        </div>
+                        <div class="servicio-opcion" data-servicio="gel" data-precio="35" data-duracion="60">
+                            <div class="servicio-info">
+                                <h4>Uñas de Gel</h4>
+                                <p>60 minutos</p>
+                            </div>
+                            <div class="servicio-precio">35€</div>
+                        </div>
+                        <div class="servicio-opcion" data-servicio="francesa" data-precio="30" data-duracion="50">
+                            <div class="servicio-info">
+                                <h4>Manicura Francesa</h4>
+                                <p>50 minutos</p>
+                            </div>
+                            <div class="servicio-precio">30€</div>
+                        </div>
+                        <div class="servicio-opcion" data-servicio="nailart" data-precio="45" data-duracion="75">
+                            <div class="servicio-info">
+                                <h4>Nail Art</h4>
+                                <p>75 minutos</p>
+                            </div>
+                            <div class="servicio-precio">45€</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="formulario-cita">
+                    <form id="citaForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Servicio Seleccionado</label>
+                                <input type="text" id="servicio" name="servicio" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fecha">Fecha Preferida *</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hora">Hora Preferida *</label>
+                                <select id="hora" name="hora" required>
+                                    <option value="">Selecciona una hora</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notas">Notas Adicionales</label>
+                            <textarea id="notas" name="notas" rows="4" placeholder="Cuéntanos si tienes alguna preferencia especial..."></textarea>
+                        </div>
+
+                        <div class="resumen-cita">
+                            <h4>Resumen de tu Cita</h4>
+                            <div class="resumen-content">
+                                <p><strong>Servicio:</strong> <span id="resumenServicio">No seleccionado</span></p>
+                                <p><strong>Duración:</strong> <span id="resumenDuracion">-</span></p>
+                                <p><strong>Precio:</strong> <span id="resumenPrecio">-</span></p>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Reservar Cita</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notificación -->
+    <div id="notificacion" class="notificacion">
+        <div class="notificacion-content">
+            <span class="notificacion-text"></span>
+            <button class="notificacion-close">&times;</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
