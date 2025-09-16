@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ NailArt Studio - Manicura Profesional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>✨ NailArt Studio</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="citas.html" class="btn-cita">Reservar Cita</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Transforma tus uñas en obras de arte</h1>
+            <p>Profesionalidad, creatividad y los mejores acabados para tus manos</p>
+            <div class="hero-buttons">
+                <a href="citas.html" class="btn btn-primary">Reservar Cita</a>
+                <a href="#galeria" class="btn btn-secondary">Ver Trabajos</a>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">💅</div>
+                    <h3>Manicura Clásica</h3>
+                    <p>Cuidado completo de tus uñas con acabado perfecto</p>
+                    <span class="precio">25€</span>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">✨</div>
+                    <h3>Uñas de Gel</h3>
+                    <p>Larga duración y resistencia con brillo excepcional</p>
+                    <span class="precio">35€</span>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🎨</div>
+                    <h3>Nail Art</h3>
+                    <p>Diseños únicos y personalizados para cada ocasión</p>
+                    <span class="precio">45€</span>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🌸</div>
+                    <h3>Manicura Francesa</h3>
+                    <p>El clásico elegante que nunca pasa de moda</p>
+                    <span class="precio">30€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Nuestros Trabajos</h2>
+            
+            <!-- Filtros -->
+            <div class="filtros">
+                <button class="filtro-btn active" data-filter="all">Todos</button>
+                <button class="filtro-btn" data-filter="clasica">Clásica</button>
+                <button class="filtro-btn" data-filter="gel">Gel</button>
+                <button class="filtro-btn" data-filter="arte">Nail Art</button>
+            </div>
+
+            <!-- Grid de trabajos -->
+            <div class="trabajos-grid">
+                <div class="trabajo-item" data-category="clasica">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop" alt="Manicura Clásica">
+                    <div class="trabajo-overlay">
+                        <h3>Manicura Clásica</h3>
+                        <p>Elegante y atemporal</p>
+                    </div>
+                </div>
+                <div class="trabajo-item" data-category="gel">
+                    <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=400&h=300&fit=crop" alt="Uñas de Gel">
+                    <div class="trabajo-overlay">
+                        <h3>Uñas de Gel</h3>
+                        <p>Duraderas y brillantes</p>
+                    </div>
+                </div>
+                <div class="trabajo-item" data-category="arte">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=400&h=300&fit=crop" alt="Nail Art">
+                    <div class="trabajo-overlay">
+                        <h3>Nail Art</h3>
+                        <p>Diseño personalizado</p>
+                    </div>
+                </div>
+                <div class="trabajo-item" data-category="clasica">
+                    <img src="https://images.unsplash.com/photo-1619194617062-5a61b698e503?w=400&h=300&fit=crop" alt="Francesa">
+                    <div class="trabajo-overlay">
+                        <h3>Francesa Deluxe</h3>
+                        <p>Con toques dorados</p>
+                    </div>
+                </div>
+                <div class="trabajo-item" data-category="gel">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400&h=300&fit=crop" alt="Gel Color">
+                    <div class="trabajo-overlay">
+                        <h3>Gel de Color</h3>
+                        <p>Vibrante y moderno</p>
+                    </div>
+                </div>
+                <div class="trabajo-item" data-category="arte">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=300&fit=crop" alt="Arte Floral">
+                    <div class="trabajo-overlay">
+                        <h3>Arte Floral</h3>
+                        <p>Delicados diseños naturales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Lista para lucir unas uñas perfectas?</h2>
+            <p>Reserva tu cita ahora y deja que transformemos tus uñas</p>
+            <a href="citas.html" class="btn btn-primary btn-large">Reservar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>✨ NailArt Studio</h3>
+                    <p>Tu salón de confianza para el cuidado de tus uñas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +34 123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@nailart.es</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Belleza, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <p>Lunes - Viernes: 10:00 - 20:00</p>
+                    <p>Sábados: 10:00 - 18:00</p>
+                    <p>Domingos: Cerrado</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NailArt Studio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
